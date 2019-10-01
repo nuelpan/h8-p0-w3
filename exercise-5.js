@@ -1,9 +1,17 @@
 function palindrome(kata) {
-  // you can only write your code here!
-  for (var i = 0; i < kata.length; i++) {
-    // console.log(kata[i], kata[kata.length-(i+1)])
-    return kata[i] === kata[kata.length - (i + 1)];
+  // easier way to check palindrome
+  // compare kata with reversed kata
+  // if kata is palindrome, function will return true
+  // return kata === kata.split("").reverse().join("");
+
+  // checking palindrome without reverse method
+  // only half kata.length is needed for looping so the loop won't overlap
+  for (var i = 0; i < kata.length / 2; i++) {
+    if (kata[i] !== kata[kata.length - (i + 1)]) {
+      return false;
+    }
   }
+  return true;
 }
 
 // TEST CASES

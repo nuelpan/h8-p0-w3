@@ -14,6 +14,7 @@ function dataHandling2(arr) {
   console.log(arr);
 
   var bulan = arr[3].split("/")[1];
+  // alternar
   switch (bulan) {
     case "01":
       bulan = "Januari";
@@ -55,7 +56,7 @@ function dataHandling2(arr) {
   console.log(bulan);
   console.log(
     arr[3].split("/").sort(function(a, b) {
-      return b - a;
+      return Number(b) - Number(a);
     })
   );
   console.log(arr[3].split("/").join("-"));
