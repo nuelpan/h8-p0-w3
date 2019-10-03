@@ -7,7 +7,7 @@ function tentukanDeretAritmatika(arr) {
   for (var i = 0; i < arr.length - 1; i++) {
     newArr.push(arr[i] - arr[i + 1]);
   }
-  console.log(newArr);
+
   for (var i = 1; i < newArr.length; i++) {
     // console.log(newArr[0])
     var diff = newArr[0];

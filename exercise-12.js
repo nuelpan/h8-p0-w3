@@ -1,18 +1,23 @@
 function tentukanDeretGeometri(arr) {
   // you can only write your code here!
 
-  // divide next item with current item to find the difference
-  // then push to newArr to compared later
   var newArr = [];
+  var hasil = true;
+
   for (var i = 0; i < arr.length - 1; i++) {
     newArr.push(arr[i + 1] / arr[i]);
   }
 
-  // compare every item in newArr with the first item
-  // the result will return a boolean
-  return newArr.every(function(num, index, array) {
-    return num === array[0];
-  });
+  for (var i = 1; i < newArr.length; i++) {
+    var diff = newArr[0];
+    if (diff !== newArr[i]) {
+      hasil = false;
+      return hasil;
+    } else {
+      hasil = true;
+    }
+  }
+  return hasil;
 }
 
 // TEST CASES
