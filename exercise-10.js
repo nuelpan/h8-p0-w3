@@ -1,19 +1,33 @@
 function perkalianUnik(arr) {
   // you can only write your code here!
   var newArr = [];
+
+  // with built in function
+  // for (var i = 0; i < arr.length; i++) {
+  //   var hasil = arr
+  //     .filter(function(num, index) {
+  //       return index !== i;
+  //     })
+  //     .reduce(function(accumulator, currentValue) {
+  //       return accumulator * currentValue;
+  //     });
+  //   newArr.push(hasil);
+  // }
+  // return newArr;
+
+  // without built in function
   for (var i = 0; i < arr.length; i++) {
-    var hasil = arr
-      .filter(function(num, index) {
-        return index !== i;
-      })
-      .reduce(function(accumulator, currentValue) {
-        return accumulator * currentValue;
-      });
+    hasil = 1;
+    for (var j = 0; j < arr.length; j++) {
+      if (j !== i) {
+        hasil *= arr[j];
+      }
+    }
     newArr.push(hasil);
   }
   return newArr;
 }
-
+var newArr = [];
 // TEST CASES
 console.log(perkalianUnik([2, 4, 6])); // [24, 12, 8]
 console.log(perkalianUnik([1, 2, 3, 4, 5])); // [120, 60, 40, 30, 24]
