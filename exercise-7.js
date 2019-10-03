@@ -3,7 +3,6 @@ function hitungJumlahKata(kalimat) {
   // return kalimat.split(" ").length;
 
   // trim unnecessary space in front or back sentence
-  // not used because test cases have no extra spaces in front or back sentences
   kalimat = kalimat.trim();
 
   var jumlahKata = 1;
