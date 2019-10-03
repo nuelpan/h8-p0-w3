@@ -1,10 +1,19 @@
 function cariMean(arr) {
   // you can only write your code here!
-  return Math.round(
-    arr.reduce(function(accumulator, currentValue) {
-      return accumulator + currentValue;
-    }) / arr.length
-  );
+
+  // === with reduce function ===
+  // return Math.round(
+  //   arr.reduce(function(accumulator, currentValue) {
+  //     return accumulator + currentValue;
+  //   }) / arr.length
+  // );
+
+  // === without reduce function ===
+  var hasil = 0;
+  for (var i = 0; i < arr.length; i++) {
+    hasil = hasil + arr[i];
+  }
+  return Math.round(hasil / arr.length);
 }
 
 // TEST CASES
