@@ -1,6 +1,9 @@
 function mengelompokkanAngka(arr) {
+  // prepare empty multidimensional array
+  // so the result can be pushed to respective array
   var hasil = [[], [], []];
-  // kalau kelipatan 3
+
+  // find the multiple of 3 first to match with the test cases
   for (var i = 0; i < arr.length; i++) {
     if (arr[i] % 3 === 0) {
       hasil[2].push(arr[i]);
