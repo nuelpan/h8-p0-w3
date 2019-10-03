@@ -1,19 +1,24 @@
 function tentukanDeretAritmatika(arr) {
   // you can only write your code here!
+
   var newArr = [];
+  var hasil = true;
 
-  // substract item in array with next item to find the difference
-  // using Math.abs so the result will always positive number
-  // then push to newArr
   for (var i = 0; i < arr.length - 1; i++) {
-    newArr.push(Math.abs(arr[i] - arr[i + 1]));
+    newArr.push(arr[i] - arr[i + 1]);
   }
-
-  // compare every item in newArr with the first item
-  // the result will return a boolean
-  return newArr.every(function(num, index, array) {
-    return num === array[0];
-  });
+  console.log(newArr);
+  for (var i = 1; i < newArr.length; i++) {
+    // console.log(newArr[0])
+    var diff = newArr[0];
+    if (diff !== newArr[i]) {
+      hasil = false;
+      return hasil;
+    } else {
+      hasil = true;
+    }
+  }
+  return hasil;
 }
 
 // TEST CASES
