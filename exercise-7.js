@@ -1,6 +1,18 @@
 function hitungJumlahKata(kalimat) {
   // you can only write your code here!
-  return kalimat.split(" ").length;
+  // return kalimat.split(" ").length;
+
+  // trim unnecessary space in front or back sentence
+  // not used because test cases have no extra spaces in front or back sentences
+  kalimat = kalimat.trim();
+
+  var jumlahKata = 1;
+  for (var i = 0; i < kalimat.length; i++) {
+    if (kalimat[i] === " ") {
+      jumlahKata += 1;
+    }
+  }
+  return jumlahKata;
 }
 
 // TEST CASES
