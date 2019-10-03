@@ -14,7 +14,7 @@ function dataHandling2(arr) {
   console.log(arr);
 
   var bulan = arr[3].split("/")[1];
-  // alternar
+
   switch (bulan) {
     case "01":
       bulan = "Januari";
