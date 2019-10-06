@@ -20,7 +20,6 @@ function groupAnimals(animals) {
   // and has the same first letter and push it to current mulitdimensional hasil
   for (var i = 0; i < hasil.length; i++) {
     for (var j = 0; j < animals.length; j++) {
-      console.log(hasil[i][0][0] + " " + animals[j][0]);
       if (hasil[i][0] !== animals[j] && hasil[i][0][0] === animals[j][0]) {
         hasil[i].push(animals[j]);
         break;
